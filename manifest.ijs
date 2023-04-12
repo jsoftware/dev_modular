@@ -9,7 +9,7 @@ modular arithmetic
 VERSION=: '1.0.0'
 
 FILES=: 0 : 0
-modular.ijs
+modulomatrixdivide.ijs
 )
 
 FOLDER=: 'dev/modular'
