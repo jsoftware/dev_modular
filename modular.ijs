@@ -36,7 +36,7 @@ Md0=: 1 : 0
 
 NB. #rows>:#cols; ambivalent
 NB. Md is meant to be like %. mod m
-Md=: 1 : 0
+Mdrank=: 1 : 0
 mp=. + m. m/ . (* m. m)
 if. </$y do.  'singular matrix' 13!:8 (3) end.
 if. >/$y
@@ -48,7 +48,11 @@ end.
 mp=. + m. m/ . (* m. m)
 (m Md_j_ y) mp x
 )
-
+Md=:1 : 0  NB. The result of (n Md) must be bivalent inside JE.  Explicit definitions are.
+(m Mdrank_j_)"2 _ 2 y
+:
+x (m Mdrank_j_)"2 _ 2 y
+)
 
 try=: 0 : 0
 ts=:6!:2 ,7!:2@]
